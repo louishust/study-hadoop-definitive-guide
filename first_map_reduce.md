@@ -34,7 +34,7 @@ public class MaxTemperatureMapper
 }
 ```
 
-输入文件按照\<offset, line\>组成KV，Mapper的工作是抽取每行数据中的年份和温度值，输出成\<year, temperature\>的KV。
+输入文件按照<offset, line>组成KV，Mapper的工作是抽取每行数据中的年份和温度值，输出成\<year, temperature\>的KV。
 
 ## Reducer
 
