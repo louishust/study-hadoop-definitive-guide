@@ -34,7 +34,7 @@ public class MaxTemperatureMapper
 }
 ```
 
-输入文件按照[offset, line]组成KV，Mapper的工作是抽取每行数据中的年份和温度值，输出成\<year, temperature\>的KV。
+输入文件按照[offset, line]组成KV，Mapper的工作是抽取每行数据中的年份和温度值，输出成[year, temperature]的KV。
 
 ## Reducer
 
@@ -55,9 +55,9 @@ public class MaxTemperatureReducer
   }
 }
 ```
-Mapper的输出结果会按照key进行merge，构成\<year,list\<temperature\>\>的KV形成，传递给Reducer。
+Mapper的输出结果会按照key进行merge，构成[year,list[temperature]]的KV形成，传递给Reducer。
 
-上面的Reducer接受Mapper的输出，计算每年的最高温度，以\<year, max_temperature\>的形式输出。
+上面的Reducer接受Mapper的输出，计算每年的最高温度，以[year, max_temperature]的形式输出。
 
 
 ## 创建作业
